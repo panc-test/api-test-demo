@@ -1,0 +1,26 @@
+{
+  "主题分类是分享贴" : {
+    "page": 1,
+    "tab": "share",
+    "limit": 1,
+    "mdrender": "false"
+  },
+   "主题分类是问答帖" : {
+    "page": 1,
+    "tab": "ask",
+    "limit": 1,
+    "mdrender": "false"
+  },
+    "主题分类是招聘帖" : {
+    "page": 1,
+    "tab": "job",
+    "limit": 1,
+    "mdrender": "false"
+  },
+    "主题分类是精华帖" : {
+    "page": 1,
+    "tab": "good",
+    "limit": 1,
+    "mdrender": "false"
+  }
+}

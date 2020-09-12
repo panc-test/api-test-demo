@@ -29,6 +29,7 @@ class TestCreateTopic(unittest.TestCase):
 
     def test_create_topic(self):
         r=requests.get(url='http://49.233.108.117:3000/api/v1/topic/'+id,params=data)
+        print(r.request.url)
         print(r.json())
         #断言
         self.assertEqual(r.status_code,200,msg='断言响应码')
