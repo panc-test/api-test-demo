@@ -24,6 +24,7 @@ class TestTopics(unittest.TestCase):
 
     @file_data('../data/topics.json')       #加载测试数据
     def test_index_page(self,page,tab,limit,mdrender):
+
         value = {
             "page": page,
             "tab": tab,
