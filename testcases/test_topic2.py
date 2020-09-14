@@ -14,7 +14,7 @@ from ddt import ddt,file_data
 
 
 @ddt    #数据驱动
-class TestTopics(unittest.TestCase):
+class TestTopicTwo(unittest.TestCase):
 
     def setUp(self) -> None:
         print('start')
@@ -38,8 +38,4 @@ class TestTopics(unittest.TestCase):
 
         #添加断言
         self.assertEqual(r.status_code,200,msg='响应状态码=200')
-
-
-if __name__ == '__main__':
-    unittest.main(verbosity=2)
 

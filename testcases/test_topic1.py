@@ -27,7 +27,7 @@ params_data2 = {
 }
 
 @ddt    #数据驱动
-class TestTopics(unittest.TestCase):
+class TestTopicOne(unittest.TestCase):
 
     def setUp(self) -> None:
         print('start')
@@ -44,8 +44,9 @@ class TestTopics(unittest.TestCase):
         #添加断言
         self.assertEqual(r.status_code,200,msg='响应状态码=200')
 
+    @unittest.skip('跳过该条测试用例')
+    def test_topics(self):
+        pass
 
-if __name__ == '__main__':
-    unittest.main(verbosity=2)
 
 
