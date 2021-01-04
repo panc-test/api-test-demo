@@ -23,6 +23,7 @@ if __name__ == '__main__':
     """
     suite = suite()
     result=BeautifulReport(suite)
-    result.report(report_dir='./report',filename='cnode测试报告',description='test_20200914')
+    result.report(report_dir='./report',filename='cnode测试报告',description='test_conde')
+
 
 
