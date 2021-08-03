@@ -1,0 +1,2 @@
+# 设置仓库默认语言
+*.html linguist-language=python
