@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project version="4">
-  <component name="ProjectModuleManager">
-    <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/Conde_API.iml" filepath="$PROJECT_DIR$/.idea/Conde_API.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../Python/.idea/PythonPractices.iml" filepath="$PROJECT_DIR$/../Python/.idea/PythonPractices.iml" />
-    </modules>
-  </component>
-</project>
