@@ -10,7 +10,7 @@ mdrender String 当为 false 时，不渲染。默认为 true，渲染出现的�
 
 import unittest
 import requests
-from ddt import ddt,data
+from ddt import ddt, data
 
 params_data1 = {
     "page": 1,
@@ -26,7 +26,8 @@ params_data2 = {
     "mdrender": "false"
 }
 
-@ddt    #数据驱动
+
+@ddt  # 数据驱动
 class TestTopicOne(unittest.TestCase):
 
     def setUp(self) -> None:
@@ -35,18 +36,15 @@ class TestTopicOne(unittest.TestCase):
     def tearDown(self) -> None:
         print('end')
 
-    @data(params_data1,params_data2)      #加载测试数据
-    def test_index_page(self,value):
+    @data(params_data1, params_data2)  # 加载测试数据
+    def test_index_page(self, value):
         r = requests.get(url='http://49.233.108.117:3000/api/v1/topics', params=value)
         response = r.json()
-        print('response=',response)
+        print('response=', response)
 
-        #添加断言
-        self.assertEqual(r.status_code,200,msg='响应状态码=200')
+        # 添加断言
+        self.assertEqual(r.status_code, 200, msg='响应状态码=200')
 
     @unittest.skip('跳过该条测试用例')
     def test_topics(self):
         pass
-
-
-

@@ -10,9 +10,10 @@ mdrender String 当为 false 时，不渲染。默认为 true，渲染出现的�
 
 import unittest
 import requests
-from ddt import ddt,file_data
+from ddt import ddt, file_data
 
-@ddt    #数据驱动
+
+@ddt  # 数据驱动
 class TestTopicThree(unittest.TestCase):
 
     def setUp(self) -> None:
@@ -21,21 +22,17 @@ class TestTopicThree(unittest.TestCase):
     def tearDown(self) -> None:
         print('end')
 
-    @file_data("../data/topics.yaml")      #加载测试数据
-    def test_index_page(self,page,tab,limit,mdrender):
+    @file_data("../data/topics.yaml")  # 加载测试数据
+    def test_index_page(self, page, tab, limit, mdrender):
         value = {
-            "page" : page,
-            "tab" : tab,
-            "limit" : limit,
-            "mdrender" : mdrender
+            "page": page,
+            "tab": tab,
+            "limit": limit,
+            "mdrender": mdrender
         }
         r = requests.get(url='http://49.233.108.117:3000/api/v1/topics', params=value)
         response = r.json()
-        print('response=',response)
+        print('response=', response)
 
-        #添加断言
-        self.assertEqual(r.status_code,200,msg='响应状态码=200')
-
-
-
-
+        # 添加断言
+        self.assertEqual(r.status_code, 200, msg='响应状态码=200')

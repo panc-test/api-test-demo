@@ -9,7 +9,8 @@ content String 主体内容
 """
 import unittest
 import requests
-from ddt import ddt,data,file_data
+from ddt import ddt, data, file_data
+
 
 @ddt
 class TestCreateTopics(unittest.TestCase):
@@ -21,18 +22,18 @@ class TestCreateTopics(unittest.TestCase):
         print('end---------------------')
 
     @file_data('../data/create_topics.yaml')
-    def test_create_topics(self,accesstoken,title,tab,content):
-        body={
-            "accesstoken":accesstoken,
-            "title":title,
-            "tab":tab,
-            "content":content
+    def test_create_topics(self, accesstoken, title, tab, content):
+        body = {
+            "accesstoken": accesstoken,
+            "title": title,
+            "tab": tab,
+            "content": content
         }
-        print("body=",body)
-        r=requests.post(url='http://49.233.108.117:3000/api/v1/topics',data=body)
+        print("body=", body)
+        r = requests.post(url='http://49.233.108.117:3000/api/v1/topics', data=body)
         print(r.json())
-        #添加断言
-        self.assertEqual(r.status_code,200,'响应码=200')
+        # 添加断言
+        self.assertEqual(r.status_code, 200, '响应码=200')
 
 
 if __name__ == '__main__':

@@ -12,9 +12,9 @@ def get_rootpath():
     返回当前项目的绝度路径
     :return:
     """
-    return  os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    return os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
 if __name__ == '__main__':
-    path=get_rootpath()
+    path = get_rootpath()
     print(path)
